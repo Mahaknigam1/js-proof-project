@@ -13,12 +13,12 @@ var AllNft = [];
 // this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
-function mintNFT (name, eye_color, skin_color) {
+function mintNFT (name, eye_color, shirt_type) {
     AllNft.push(
         {
         Name: name,
         EyeColor: eye_color,
-        SkinColor: skin_color
+        ShirtType: shirt_type,
         }
     );
 }
@@ -28,7 +28,7 @@ function mintNFT (name, eye_color, skin_color) {
 function listNFTs () {
     for(let i = 0; i < AllNft.length ; i++){
         let temp = AllNft[i];
-        console.log('Name = ' + temp.Name,', eye color = ' + temp.EyeColor, ', skin color = ' + temp.SkinColor);
+        console.log('Name = ' + temp.Name,', eye color = ' + temp.EyeColor, ',shirt type = ' + temp.ShirtType);
     }
 }
 
@@ -39,9 +39,9 @@ function getTotalSupply() {
 
 // call your functions below this line
 
-mintNFT('Mahak', 'black', 'pale');
-mintNFT('ansh', 'brown', 'black');
-mintNFT('mansi', 'blue', 'dark brown');
+mintNFT('Mahak', 'black', 'collared');
+mintNFT('ansh', 'brown', 'round');
+mintNFT('mansi', 'blue', 'sqaure neck');
 
 
 
